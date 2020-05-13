@@ -18,8 +18,8 @@ public class Officer {
 
     }
     public static void main (String [] args){
-        Truck kamaz = new Truck(10, 4, 2, 20);
-        Truck belaz = new Truck(20, 8, 4, 20);
+        Truck kamaz = new Truck(10, 4, 2, 10);
+        Truck belaz = new Truck(20, 8, 4, 12);
         Officer bridgeOfficer = new Officer(15);
         System.out.println("Mogu li ia proekhat na kamaze, offiser? Offiser:" + bridgeOfficer.canIDrive(kamaz));
         System.out.println("Mogu li ia proekhat na belaz, offiser? Offiser:" + bridgeOfficer.canIDrive(belaz));
