@@ -22,27 +22,27 @@ public class TrafficLights2 {
         while (i <= a) {
              if ((countGreen < 3) & (colorFlag == 1)) {
                  color = "зеленый";
-                 countGreen++;
+                 ++countGreen;
              }
              else {
                  countGreen = 0;
                  colorFlag = 2;
                  if ((countYellow < 1) & (colorFlag == 2)) {
                      color = "желтый";
-                     countYellow++;
+                     ++countYellow;
                  } else {
                      countYellow = 0;
                      colorFlag = 3;
                      if ((colorCountRed < 1) & (colorFlag == 3)) {
                          color = "красный";
-                         colorCountRed++;
+                         ++colorCountRed;
                      } else {
                          colorCountRed = 0;
                          colorFlag = 1;
                      }
                  }
              }
-            i++;
+            ++i;
         }
         System.out.println(color);
     }
