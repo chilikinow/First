@@ -9,7 +9,7 @@ public class WorkWithMethodOfTheObject {
         Person sasha = new Person();
         Person.initialization(sasha);
         sasha.firstPresentation();
-        sasha.married("Kim");
+        sasha.wedding("Kim");
         sasha.thaiTraval(true);
     }
 }
@@ -20,31 +20,35 @@ class Person {
     private byte age;
     private char sex;
 
-    public void setFirstName(String firstName){
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-    public String getFirstName(){
+
+    public String getFirstName() {
         return this.firstName;
     }
 
-    public void setSecondName(String secondName){
+    public void setSecondName(String secondName) {
         this.secondName = secondName;
     }
-    public String getSecondName(){
+
+    public String getSecondName() {
         return this.secondName;
     }
 
-    public void setAge(byte age){
+    public void setAge(byte age) {
         this.age = age;
     }
-    public byte getAge(){
+
+    public byte getAge() {
         return this.age;
     }
 
-    public void setSex(char sex){
+    public void setSex(char sex) {
         this.sex = sex;
     }
-    public char getSex(){
+
+    public char getSex() {
         return this.sex;
     }
 
@@ -57,7 +61,7 @@ class Person {
         person.setSecondName(reader.readLine());
         System.out.print("Введите Возраст: ");
         String ageS = reader.readLine();
-        person.setAge((byte)Integer.parseInt(ageS));
+        person.setAge((byte) Integer.parseInt(ageS));
         System.out.print("Введите Пол: ");
         String sexS = reader.readLine();
         person.setSex(sexS.charAt(0));
@@ -83,9 +87,9 @@ class Person {
         System.out.println();
     }
 
-    void married(String newSecondName) {
+    void wedding(String newSecondName) {
         this.secondName = newSecondName;
-        System.out.print("New information about me:\n" + "My name is: " + this.firstName +
+        System.out.print("New information about me, after wedding:\n" + "My name is: " + this.firstName +
                 " " + this.secondName + "\n" + "I'm " + this.age + " years old\nI'm ");
         if (this.sex == 'M')
             System.out.println("Man");
@@ -108,21 +112,25 @@ class Person {
                 for (int i = 0; i < this.secondName.length(); i++) {
                     massString[i] = this.secondName.charAt(i);
                 }
-                this.secondName = "";
-                for (int i = 0; i < (massString.length - 1); i++) {
-                    this.secondName += massString[i];
+                int end = this.secondName.length();
+                char okonchanie = massString[massString.length];
+                if (Character.toLowerCase(okonchanie) == Character.toLowerCase('a')) {
+                    this.secondName = "";
+                    for (int i = 0; i < (massString.length - 1); i++) {
+                        this.secondName += massString[i];
+                    }
                 }
+
+                System.out.print("After travel to Thai =) :\n" + "My name is: " + this.firstName +
+                        " " + this.secondName + "\n" + "I'm " + this.age + " years old\nI'm ");
+                if (this.sex == 'M')
+                    System.out.println("Man");
+                else
+                    System.out.println("Woman");
+                System.out.println();
+
+
             }
         }
-
-        System.out.print("After travel to Thai =) :\n" + "My name is: " + this.firstName +
-                " " + this.secondName + "\n" + "I'm " + this.age + " years old\nI'm ");
-        if (this.sex == 'M')
-            System.out.println("Woman");
-        else
-            System.out.println("Man");
-        System.out.println();
-
-
     }
 }
