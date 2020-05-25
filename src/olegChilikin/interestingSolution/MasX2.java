@@ -2,7 +2,7 @@ package olegChilikin.interestingSolution;
 
 import java.io.IOException;
 
-public class masX2 {
+public class MasX2 {
     public static void main(String[] args) throws IOException {
         int[][] masX2 = new int[10][10];
         for (int i = 0; i<masX2.length; i++){
