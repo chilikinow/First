@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class WorkWithMethodOfTheObject {
     public static void main(String[] args) throws IOException {
         Person sasha = new Person();
-        sasha.initialization();
+        Person.initialization(sasha);
         sasha.firstPresentation();
         sasha.married("Kim");
         sasha.thaiTraval(true);
@@ -15,23 +15,52 @@ public class WorkWithMethodOfTheObject {
 }
 
 class Person {
-    String firstName;
-    String secondName;
-    byte age;
-    char sex;
+    private String firstName;
+    private String secondName;
+    private byte age;
+    private char sex;
 
-    void initialization() throws IOException {
+    public void setFirstName(String firstName){
+        this.firstName = firstName;
+    }
+    public String getFirstName(){
+        return this.firstName;
+    }
+
+    public void setSecondName(String secondName){
+        this.secondName = secondName;
+    }
+    public String getSecondName(){
+        return this.secondName;
+    }
+
+    public void setAge(byte age){
+        this.age = age;
+    }
+    public byte getAge(){
+        return this.age;
+    }
+
+    public void setSex(char sex){
+        this.sex = sex;
+    }
+    public char getSex(){
+        return this.sex;
+    }
+
+
+    public static void initialization(Person person) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Введите Имя: ");
-        this.firstName = reader.readLine();
+        person.setFirstName(reader.readLine());
         System.out.print("Введите Фамилию: ");
-        this.secondName = reader.readLine();
+        person.setSecondName(reader.readLine());
         System.out.print("Введите Возраст: ");
         String ageS = reader.readLine();
-        this.age = (byte) Integer.parseInt(ageS);
+        person.setAge((byte)Integer.parseInt(ageS));
         System.out.print("Введите Пол: ");
         String sexS = reader.readLine();
-        this.sex = sexS.charAt(0);
+        person.setSex(sexS.charAt(0));
         System.out.println();
     }
 
