@@ -1,5 +1,8 @@
 package olegChilikin.interestingSolution;
 
+import java.util.Comparator;
+import java.lang.Comparable;
+
 public class CatFight {
     public int age;
     public int weight;
