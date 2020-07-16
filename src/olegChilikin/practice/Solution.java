@@ -2,7 +2,7 @@ package olegChilikin.practice;
 
 public class Solution {
     public static void main(String[] args) {
-        System.out.println(isDateOdd("MAY 1 2013"));
+        System.out.println(isDateOdd("JANUARY 1 2000 "));
     }
 
     public static boolean isDateOdd(String date) {
@@ -19,19 +19,26 @@ public class Solution {
             if (probel == 0) {
                 if (!dateArray[i].equals(" "))
                     month += dateArray[i];
-                else
+                else {
                     ++probel;
+                    ++i;
+                }
             }
             if (probel == 1) {
                 if (!dateArray[i].equals(" "))
                     day += dateArray[i];
-                else
+                else{
                     ++probel;
+                    ++i;
+                }
             }
-            if (probel == 2 && !dateArray[i].equals(" "))
-                    day += dateArray[i];
+            if (probel == 2)
+                if (!dateArray[i].equals(" "))
+                    year += dateArray[i];
+                else
+                    break;
         }
-        System.out.println(month + day + year);
+        System.out.println(month + " " + day + " " + year);
         return true;
     }
 
