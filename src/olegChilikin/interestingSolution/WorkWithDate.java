@@ -1,4 +1,4 @@
-package olegChilikin.practice;
+package olegChilikin.interestingSolution;
 
 /*
 Работа с датой
@@ -13,14 +13,14 @@ JANUARY 2 2020 = false
 
 Требования:
 1. Программа должна выводить текст на экран.
-2. Класс Solution должен содержать два метода.
+2. Класс WorkWithDate должен содержать два метода.
 3. Метод isDateOdd() должен возвращать true, если количество дней с начала года - нечетное число, иначе false.
 4. Метод main() должен вызывать метод isDateOdd().
 */
 
 import java.util.Date;
 
-public class Solution {
+public class WorkWithDate {
     public static void main(String[] args) {
         System.out.println(isDateOdd("JANUARY 2 2020"));
     }
@@ -131,6 +131,4 @@ public class Solution {
         else
             return false;
     }
-
-
 }
