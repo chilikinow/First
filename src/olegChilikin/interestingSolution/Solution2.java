@@ -1,4 +1,4 @@
-package olegChilikin.practice;
+package olegChilikin.interestingSolution;
 
 import org.w3c.dom.ls.LSOutput;
 

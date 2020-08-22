@@ -1,4 +1,4 @@
-package olegChilikin.practice;
+package olegChilikin.interestingSolution;
 
 public enum Mode {
     Alphabet,

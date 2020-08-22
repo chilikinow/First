@@ -1,7 +1,6 @@
-package olegChilikin.practice;
+package olegChilikin.interestingSolution;
 
 import java.io.*;
-import java.rmi.server.ExportException;
 import java.util.*;
 
 public class SortTool {
